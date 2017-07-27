@@ -1,0 +1,11 @@
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\PlaneManagmentSystem\bin\Release\netcoreapp1.1\PlaneManagmentSystem.deps.json
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\PlaneManagmentSystem\bin\Release\netcoreapp1.1\PlaneManagmentSystem.runtimeconfig.json
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\PlaneManagmentSystem\bin\Release\netcoreapp1.1\PlaneManagmentSystem.runtimeconfig.dev.json
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\PlaneManagmentSystem\bin\Release\netcoreapp1.1\PlaneManagmentSystem.dll
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\PlaneManagmentSystem\bin\Release\netcoreapp1.1\PlaneManagmentSystem.pdb
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\PlaneManagmentSystem\bin\Release\netcoreapp1.1\DataProvider.dll
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\PlaneManagmentSystem\bin\Release\netcoreapp1.1\DataProvider.pdb
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\PlaneManagmentSystem\obj\Release\netcoreapp1.1\PlaneManagmentSystem.csprojResolveAssemblyReference.cache
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\PlaneManagmentSystem\obj\Release\netcoreapp1.1\PlaneManagmentSystem.AssemblyInfo.cs
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\PlaneManagmentSystem\obj\Release\netcoreapp1.1\PlaneManagmentSystem.dll
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\PlaneManagmentSystem\obj\Release\netcoreapp1.1\PlaneManagmentSystem.pdb

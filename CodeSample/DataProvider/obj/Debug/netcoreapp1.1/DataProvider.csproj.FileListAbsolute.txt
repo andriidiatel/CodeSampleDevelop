@@ -1,0 +1,14 @@
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\DataProvider\bin\Debug\netcoreapp1.1\DataProvider.deps.json
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\DataProvider\bin\Debug\netcoreapp1.1\DataProvider.dll
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\DataProvider\bin\Debug\netcoreapp1.1\DataProvider.pdb
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\DataProvider\obj\Debug\netcoreapp1.1\DataProvider.AssemblyInfo.cs
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\DataProvider\obj\Debug\netcoreapp1.1\DataProvider.dll
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\DataProvider\obj\Debug\netcoreapp1.1\DataProvider.pdb
+c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\DataProvider\obj\Debug\netcoreapp1.1\DataProvider.csprojResolveAssemblyReference.cache
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\DataProvider\bin\Debug\netcoreapp1.1\DataProvider.deps.json
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\DataProvider\bin\Debug\netcoreapp1.1\DataProvider.dll
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\DataProvider\bin\Debug\netcoreapp1.1\DataProvider.pdb
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\DataProvider\obj\Debug\netcoreapp1.1\DataProvider.csprojResolveAssemblyReference.cache
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\DataProvider\obj\Debug\netcoreapp1.1\DataProvider.AssemblyInfo.cs
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\DataProvider\obj\Debug\netcoreapp1.1\DataProvider.dll
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\DataProvider\obj\Debug\netcoreapp1.1\DataProvider.pdb
