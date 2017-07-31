@@ -25,7 +25,7 @@
                 <th>
                     @Html.DisplayNameFor(model => model.ModeSCode)
                 </th>
-            <th style="display:none" ></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -42,10 +42,10 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ModeSCode)
-            <td style="display:none" >
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Registration }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Registration }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Registration })
             </td>
         </tr>
 }

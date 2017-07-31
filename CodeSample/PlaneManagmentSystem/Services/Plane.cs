@@ -15,12 +15,26 @@ namespace PlaneManagmentSystem.Services
         // Connection string to data storages
         private string connString = "DefaultEndpointsProtocol=https;AccountName=codesample;AccountKey=qmAJQAeBuHL3QSnyUmSJglGm7ExEInszHAMM/+aRJRiXQTMOkoS4tI8tYo+cc5mXuiw5hRti46WXyb0g3me6JA==;EndpointSuffix=core.windows.net";
 
-        // GET api/values/5
-        [HttpGet("{regID}")]
-        public string Get(string regID)
+        // GET: api/values
+        [HttpGet]
+        public IEnumerable<DataProvider.DataModel.Plane> Get()
         {
             // Get data from Azure storage and display in page
-            var table = DataProvider.Common.AzureHelper.GetTableReader(connString,
+            var table = DataProvider.Common.AzureHelper.GetTable(connString,
+                    DataProvider.Common.Constants.Entities.Plane.Name);
+            var query = new TableQuery<DataProvider.DataModel.Plane>();
+
+            var result = table.ExecuteQuerySegmentedAsync(query, new TableContinuationToken());
+
+            return result.Result;
+        }
+
+        // GET api/values/5
+        [HttpGet("{regID}")]
+        public DataProvider.DataModel.Plane Get(string regID)
+        {
+            // Get data from Azure storage and display in page
+            var table = DataProvider.Common.AzureHelper.GetTable(connString,
                     DataProvider.Common.Constants.Entities.Plane.Name);
             var query = new TableQuery<DataProvider.DataModel.Plane>().Where(TableQuery.GenerateFilterCondition("RowKey", QueryComparisons.Equal, regID));
 
@@ -30,10 +44,11 @@ namespace PlaneManagmentSystem.Services
             if (planeInfoResult.Count() > 0)
             {
                 var planeInfo = planeInfoResult.First();
-                return Newtonsoft.Json.JsonConvert.SerializeObject(planeInfo);
+                return planeInfo;
             }
 
-            return Newtonsoft.Json.JsonConvert.SerializeObject(new { Message = "Not found" });
+            //return Newtonsoft.Json.JsonConvert.SerializeObject(new { Message = "Not found" });
+            return null;
         }
     }
 }

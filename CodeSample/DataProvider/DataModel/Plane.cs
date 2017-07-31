@@ -31,6 +31,14 @@ namespace DataProvider.DataModel
                 return this.RowKey;
             }
         }
+        [Microsoft.WindowsAzure.Storage.Table.IgnoreProperty]
+        public DateTime Created
+        {
+            get
+            {
+                return this.Timestamp.Date;
+            }
+        }
         public string Type { get; set; }
         public string ModeSCode { get; set; }
     }

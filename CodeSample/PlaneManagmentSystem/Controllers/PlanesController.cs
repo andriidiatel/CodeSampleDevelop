@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using DataProvider.DataModel;
 using Microsoft.WindowsAzure.Storage.Table;
+using DataProvider.Common;
 
 namespace PlaneManagmentSystem.Controllers
 {
@@ -17,20 +18,19 @@ namespace PlaneManagmentSystem.Controllers
         // GET: Planes
         public ActionResult Index()
         {
-            // Get data from Azure storage and display in page
-            var table = DataProvider.Common.AzureHelper.GetTableReader(connString,
-                    DataProvider.Common.Constants.Entities.Plane.Name);
-            var query = new TableQuery<Plane>();
+            PlaneManagmentSystem.Services.Plane planeClient = new Services.Plane();
+            var planesData = planeClient.Get();
 
-            var result = table.ExecuteQuerySegmentedAsync(query, new TableContinuationToken());
-
-            return View(result.Result);
+            return View(planesData);
         }
 
         // GET: Planes/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
-            return View();
+            PlaneManagmentSystem.Services.Plane planeClient = new Services.Plane();
+            var planeObj = planeClient.Get(id);
+            
+            return View(planeObj);
         }
 
         // GET: Planes/Create
@@ -63,19 +63,57 @@ namespace PlaneManagmentSystem.Controllers
         }
 
         // GET: Planes/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string id)
         {
-            return View();
+            PlaneManagmentSystem.Services.Plane planeClient = new Services.Plane();
+            var planeObj = planeClient.Get(id);
+            
+            return View(planeObj);
         }
 
         // POST: Planes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(string id, IFormCollection collection)
         {
             try
             {
-                // TODO: Add update logic here
+                // Create a retrieve operation that takes a plane entity.
+                TableOperation retrieveOperation = TableOperation.Retrieve<DataProvider.DataModel.Plane>(
+                    collection[DataProvider.Common.Constants.Entities.Plane.Columns.Manufacturer], 
+                    collection[DataProvider.Common.Constants.Entities.Plane.Columns.Registration]);
+
+                var table = AzureHelper.GetTable(connString, Constants.Entities.Plane.Name);
+
+                // Execute the operation.
+                var retrievedResult = table.ExecuteAsync(retrieveOperation).Result;
+                var updateEntity = (DataProvider.DataModel.Plane)retrievedResult.Result;
+
+                if (updateEntity != null)
+                {
+                    bool userChangeProperty = false;
+
+                    // Check can user change any of properties
+                    if (updateEntity.ModeSCode != collection[Constants.Entities.Plane.Columns.ModeSCode])
+                    {
+                        updateEntity.ModeSCode = collection[Constants.Entities.Plane.Columns.ModeSCode];
+                        userChangeProperty = true;
+                    }
+
+                    if (updateEntity.Type != collection[Constants.Entities.Plane.Columns.Type])
+                    {
+                        updateEntity.Type = collection[Constants.Entities.Plane.Columns.Type];
+                        userChangeProperty = true;
+                    }
+
+                    // If user change some property(s), send data to storage
+                    if (userChangeProperty)
+                    {
+                        TableOperation updateOperation = TableOperation.Replace(updateEntity);
+                        
+                        table.ExecuteAsync(updateOperation);
+                    }
+                }
 
                 return RedirectToAction("Index");
             }
@@ -86,19 +124,40 @@ namespace PlaneManagmentSystem.Controllers
         }
 
         // GET: Planes/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(string id)
         {
-            return View();
+            PlaneManagmentSystem.Services.Plane planeClient = new Services.Plane();
+            var planeObj = planeClient.Get(id);
+            
+            return View(planeObj);
         }
 
         // POST: Planes/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(string id, IFormCollection collection)
         {
             try
             {
-                // TODO: Add delete logic here
+                // Get item
+                PlaneManagmentSystem.Services.Plane planeClient = new Services.Plane();
+                var planeObj = planeClient.Get(id);
+
+                // Prepare deleto operation
+                TableOperation retrieveOperation = TableOperation.Retrieve<DataProvider.DataModel.Plane>(planeObj.Manufacturer, planeObj.Registration);
+
+                var table = AzureHelper.GetTable(connString, Constants.Entities.Plane.Name);
+                var retrievedResult = table.ExecuteAsync(retrieveOperation).Result;
+
+                var deleteEntity = (DataProvider.DataModel.Plane)retrievedResult.Result;
+
+                if (deleteEntity != null)
+                {
+                    // execute opertion
+                    TableOperation updateOperation = TableOperation.Delete(deleteEntity);
+
+                    table.ExecuteAsync(updateOperation);
+                }
 
                 return RedirectToAction("Index");
             }

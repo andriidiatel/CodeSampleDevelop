@@ -9,3 +9,14 @@ c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\PlaneManagment
 c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\PlaneManagmentSystem\obj\Release\netcoreapp1.1\PlaneManagmentSystem.AssemblyInfo.cs
 c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\PlaneManagmentSystem\obj\Release\netcoreapp1.1\PlaneManagmentSystem.dll
 c:\users\sp_farm\documents\visual studio 2017\Projects\CodeSample\PlaneManagmentSystem\obj\Release\netcoreapp1.1\PlaneManagmentSystem.pdb
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\PlaneManagmentSystem\bin\Release\netcoreapp1.1\PlaneManagmentSystem.deps.json
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\PlaneManagmentSystem\bin\Release\netcoreapp1.1\PlaneManagmentSystem.runtimeconfig.json
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\PlaneManagmentSystem\bin\Release\netcoreapp1.1\PlaneManagmentSystem.runtimeconfig.dev.json
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\PlaneManagmentSystem\bin\Release\netcoreapp1.1\PlaneManagmentSystem.dll
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\PlaneManagmentSystem\bin\Release\netcoreapp1.1\PlaneManagmentSystem.pdb
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\PlaneManagmentSystem\bin\Release\netcoreapp1.1\DataProvider.dll
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\PlaneManagmentSystem\bin\Release\netcoreapp1.1\DataProvider.pdb
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\PlaneManagmentSystem\obj\Release\netcoreapp1.1\PlaneManagmentSystem.csprojResolveAssemblyReference.cache
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\PlaneManagmentSystem\obj\Release\netcoreapp1.1\PlaneManagmentSystem.AssemblyInfo.cs
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\PlaneManagmentSystem\obj\Release\netcoreapp1.1\PlaneManagmentSystem.dll
+C:\Users\sp_farm\Documents\Visual Studio 2017\Projects\CodeSampleDevelop\CodeSample\PlaneManagmentSystem\obj\Release\netcoreapp1.1\PlaneManagmentSystem.pdb

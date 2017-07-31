@@ -62,7 +62,7 @@ namespace DataProvider.Common
         /// <param name="connectionString">String with data for connect to Azure Storage account</param>
         /// <param name="tableName">Name of table where storage data</param>
         /// <returns></returns>
-        public static CloudTable GetTableReader(string connectionString, string tableName)
+        public static CloudTable GetTable(string connectionString, string tableName)
         {
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
             
